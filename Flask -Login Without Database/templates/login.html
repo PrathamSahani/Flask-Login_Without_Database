@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .contain{
+            color: green;
+            font-style: italic;
+        }
+        .row{
+            font-weight: bold;
+        }
+        .fill{
+            color: gray;
+        }
+        .Column{
+            background-color: burlywood;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .error{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    {% if error%}
+    <h2 class="error">{{error}} &#128517;</h2>
+    {% endif%}
+
+ <form method="post" action="/login">
+   <div class="container">
+    <h2 class="contain"> " Welcome To GFG Login &#128512;"</h2>
+    <h3 class="fill"> Fill Following Details !</h3>
+    <label  class="row"  for="">Username</label>
+    <input type="username"  name="username" >
+    <br></br>
+    <label class="row" for="">Password</label>
+    <input type="password" name="pass" >
+    <br></br>
+    <input class="Column" type="submit" name="" id="">
+   </div>
+    </form>
+</body>
+</html>
